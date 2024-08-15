@@ -1,4 +1,4 @@
-name: Deploy Images to GHCR
+name: Deploy to GHCR
 
 env:
   DOTNET_VERSION: '6.0.x'

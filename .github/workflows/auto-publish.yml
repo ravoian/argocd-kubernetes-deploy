@@ -12,6 +12,9 @@ on:
 jobs:
       push-store-image:
         runs-on: ubuntu-latest
+        permissions:
+              contents: read
+              packages: write
         defaults:
           run:
             working-directory: './'
@@ -30,3 +33,4 @@ jobs:
             run: |
               docker build . --tag ghcr.io/ravoian/nginx-test-container:latest
               docker push ghcr.io/ravoian/nginx-test-container:latest
+
